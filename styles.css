@@ -1,0 +1,287 @@
+/* North Star Bakery - styles.css
+   Mobile-first, Flexbox, 4 colors, 2 fonts */
+
+:root {
+  --bg: #FFF8F0;          /* warm cream background */
+  --text: #3D2B1F;        /* dark brown for readable body text */
+  --accent: #C67B4A;      /* caramel/terracotta for buttons & highlights */
+  --dark: #5C4033;        /* medium-dark brown for headers & nav */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Typography hierarchy */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--dark);
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+/* Header & logo */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #F5EDE0;
+  border-bottom: 3px solid var(--accent);
+}
+
+header img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation - mobile first: stacked */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 140px;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Images & media */
+img,
+picture img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #6B5344;
+  font-style: italic;
+  margin-top: 0.35rem;
+}
+
+video,
+audio {
+  max-width: 100%;
+  margin: 0.75rem 0;
+}
+
+/* Form styles */
+form {
+  background-color: #F5EDE0;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #E0D0B8;
+  margin-bottom: 1.5rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+legend {
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--dark);
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  padding: 0;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #C4A484;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--text);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1.5rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: var(--dark);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background-color: var(--dark);
+  color: #F5EDE0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ========== Media Query: larger screens ========== */
+@media (min-width: 640px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  header img {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    flex: 1;
+    margin: 0;
+    font-size: 1.9rem;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    min-width: auto;
+    padding: 0.4rem 0.9rem;
+  }
+
+  main {
+    padding: 1.75rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  /* Slightly larger media on tablet+ */
+  video {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 900px) {
+  header {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  main {
+    max-width: 960px;
+  }
+
+  nav ul {
+    gap: 1.25rem;
+  }
+}
