@@ -1,11 +1,9 @@
-/* North Star Bakery - styles.css
-   Mobile-first, Flexbox, 4 colors, 2 fonts */
 
 :root {
-  --bg: #FFF8F0;          /* warm cream background */
-  --text: #3D2B1F;        /* dark brown for readable body text */
-  --accent: #C67B4A;      /* caramel/terracotta for buttons & highlights */
-  --dark: #5C4033;        /* medium-dark brown for headers & nav */
+  --bg: #FFF8F0;          
+  --text: #3D2B1F;        
+  --accent: #C67B4A;      
+  --dark: #5C4033;        
 }
 
 * {
@@ -212,6 +210,134 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* ========== Interactive Feature: Favorites ========== */
+.product-card {
+  background-color: #F5EDE0;
+  border: 1px solid #E0D0B8;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.product-card p {
+  margin-bottom: 0.75rem;
+}
+
+.fav-btn {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fav-btn:hover,
+.fav-btn:focus {
+  background-color: var(--dark);
+}
+
+.fav-btn.is-favorite {
+  background-color: var(--dark);
+}
+
+.fav-btn.is-favorite::before {
+  content: "★ ";
+}
+
+.favorites-panel {
+  background-color: #F5EDE0;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+
+.favorites-panel h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: none;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.favorites-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #E0D0B8;
+}
+
+.favorites-list li:last-child {
+  border-bottom: none;
+}
+
+.remove-fav {
+  background: none;
+  border: none;
+  color: #a33;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.remove-fav:hover {
+  text-decoration: underline;
+}
+
+.favorites-empty {
+  font-style: italic;
+  color: #6B5344;
+  margin: 0.5rem 0 0;
+}
+
+/* ========== Form Validation Feedback ========== */
+.error-message {
+  display: none;
+  color: #a33;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border-color: #a33;
+  background-color: #fff5f5;
+}
+
+.form-success {
+  display: none;
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+  color: #2e7d32;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form-success.visible {
+  display: block;
 }
 
 /* ========== Media Query: larger screens ========== */
