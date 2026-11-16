@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>North Star Bakery - Contact</title>
+</head>
+<body>
+  <header>
+    <img src="bakery-logo_c.png" alt="North Star Bakery logo">
+    <h1>North Star Bakery</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Pre-Order or Ask a Question</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Contact Details</legend>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="pickup">Pickup Date</label>
+        <input type="date" id="pickup" name="pickup" required>
+        <label for="type">Request Type</label>
+        <select id="type" name="type" required>
+          <option value="">Choose one</option>
+          <option value="preorder">Pre-order</option>
+          <option value="question">General question</option>
+        </select>
+        <label for="details">What do you need?</label>
+        <textarea id="details" name="details" required></textarea>
+        <label for="allergy">Allergy notes (optional)</label>
+        <input type="text" id="allergy" name="allergy">
+      </fieldset>
+      <button type="submit">Send Request</button>
+    </form>
+    <p>142 Maple Street · Tue–Sat 7am–3pm</p>
+  </main>
+  <footer>
+    <p>North Star Bakery · Neighborhood bread since 2019</p>
+  </footer>
+</body>
+</html>
